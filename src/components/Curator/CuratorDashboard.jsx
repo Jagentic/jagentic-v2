@@ -30,7 +30,7 @@ const CuratorDashboard = () => {
     };
 
     return (
-        <div className="min-h-screen bg-background text-white p-8 pb-32">
+        <div className="h-screen overflow-y-auto bg-background text-white p-8 pb-32">
             <div className="max-w-6xl mx-auto">
                 <div className="flex justify-between items-center mb-8 sticky top-0 bg-background/95 backdrop-blur z-50 py-4 border-b border-white/10">
                     <div>
