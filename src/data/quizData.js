@@ -1189,5 +1189,215 @@ export const quizQuestions = [
     "correct_answer": 2,
     "hint": "These are the 'batteries included' with every Python installation.",
     "explanation": "The Standard Library is a huge set of modules (`os`, `sys`, `json`, `math`, `datetime`) that come with the base Python installation, meaning you can immediately use them without needing to install anything extra."
+  },
+  {
+    "id": 101,
+    "category": "Google Workspace & Gemini",
+    "question": "What is the recommended way to reference a specific document or email when prompting Gemini Apps?",
+    "options": [
+      "Paste the specific URL of the document or email into the prompt",
+      "Use keywords from the content and specify the app, service, or content type",
+      "Upload the file manually to the chat window every time",
+      "Copy and paste the entire text of the document into the prompt"
+    ],
+    "correctAnswer": 1,
+    "hint": "Check the 'Tip' under the 'Use Google Workspace in Gemini Apps' section.",
+    "explanation": "The documentation explicitly provides a \"Tip\" advising against pasting URLs. Instead, it recommends using keywords from the content combined with the specific app name (e.g., \"Summarize the marketing plan in Docs\") to help Gemini locate the correct file."
+  },
+  {
+    "id": 102,
+    "category": "Google Workspace & Gemini",
+    "question": "Which of the following Google Workspace apps is NOT currently supported for content access by Gemini Apps?",
+    "options": [
+      "Google Docs",
+      "Google Slides",
+      "Google Drive (PDFs)",
+      "Google Keep"
+    ],
+    "correctAnswer": 1,
+    "hint": "Think about the file types often used for presentations and spreadsheets.",
+    "explanation": "The text explicitly lists \"Answer prompts about Slides or Sheets\" under the section \"What Gemini Apps can’t do,\" meaning it cannot access the content within presentations or spreadsheets."
+  },
+  {
+    "id": 103,
+    "category": "Google Workspace & Gemini",
+    "question": "If you are using a work or school account, why might you be unable to connect Google Workspace?",
+    "options": [
+      "You have not verified your phone number.",
+      "Your administrator has not enabled the ability to connect with apps.",
+      "You are using a browser other than Chrome.",
+      "You have too many files in your Drive."
+    ],
+    "correctAnswer": 1,
+    "hint": "Organizational accounts often require permission from a specific person or role.",
+    "explanation": "For organizational accounts (work or school), the individual user cannot enable this feature alone; the Google Workspace administrator must first enable the ability to connect with apps for the organization."
+  },
+  {
+    "id": 104,
+    "category": "Google Workspace & Gemini",
+    "question": "What specific Gmail setting must be turned ON for Gemini Apps to connect with Google Workspace?",
+    "options": [
+      "Smart features and personalization",
+      "Two-factor authentication",
+      "IMAP access",
+      "Conversation view"
+    ],
+    "correctAnswer": 0,
+    "hint": "It involves \"smart\" capabilities and customizing your experience.",
+    "explanation": "For Gemini Apps to connect, both \"Smart features and personalization\" settings must be enabled in your Gmail settings. If these are off, the connection will fail."
+  },
+  {
+    "id": 105,
+    "category": "Google Workspace & Gemini",
+    "question": "What restriction applies to users under 18 when using the Google Workspace app in Gemini?",
+    "options": [
+      "They cannot use the feature at all.",
+      "It only works with English prompts.",
+      "They cannot access Google Drive files.",
+      "They need parental approval for every prompt."
+    ],
+    "correctAnswer": 1,
+    "hint": "The limitation relates to the language used in the conversation.",
+    "explanation": "The documentation notes that \"If you’re under 18, the Google Workspace app currently only works with English prompts in Gemini.\""
+  },
+  {
+    "id": 106,
+    "category": "Google Workspace & Gemini",
+    "question": "Which of the following actions can Gemini perform in Google Tasks?",
+    "options": [
+      "Delete completed tasks",
+      "Add and retrieve tasks",
+      "Assign tasks to other users",
+      "Change the color of a task"
+    ],
+    "correctAnswer": 1,
+    "hint": "Think about basic list management: putting things in and looking at what is there.",
+    "explanation": "The text explicitly lists \"Add and retrieve your tasks from Google Tasks\" as a supported capability. It does not mention deletion or assignment features."
+  },
+  {
+    "id": 107,
+    "category": "Google Workspace & Gemini",
+    "question": "Gemini Apps CANNOT access which of the following content within Google Docs or Gmail?",
+    "options": [
+      "The text body of the document",
+      "The sender of an email",
+      "Attachments, comments, or images",
+      "The date of the email"
+    ],
+    "correctAnswer": 2,
+    "hint": "These are the \"extras\" often added to a document or email, rather than the main text.",
+    "explanation": "The \"What Gemini Apps can’t do\" section specifically excludes access to attachments, comments, or images within Docs or Gmail. It can only process the main text body."
+  },
+  {
+    "id": 108,
+    "category": "Google Workspace & Gemini",
+    "question": "How should you verify the information provided by Gemini Apps to ensure it isn't a hallucination?",
+    "options": [
+      "Ask Gemini to repeat the answer.",
+      "Select and review the sources listed after the response.",
+      "Assume the information is always correct.",
+      "Check your email manually before asking."
+    ],
+    "correctAnswer": 1,
+    "hint": "Gemini usually provides citations or links to the documents it used.",
+    "explanation": "Because Gemini can hallucinate or reference outdated info, the text advises users to \"check the information, select and review the sources listed after the response.\""
+  },
+  {
+    "id": 109,
+    "category": "Google Workspace & Gemini",
+    "question": "When do you need to explicitly mention the Google Workspace app (e.g., \"Check Gmail\") in your prompt?",
+    "options": [
+      "For every single message you send.",
+      "Only when asking about Google Drive.",
+      "For every new conversation.",
+      "You never need to mention it explicitly."
+    ],
+    "correctAnswer": 2,
+    "hint": "Think about when you start a fresh topic or chat.",
+    "explanation": "The instructions state: \"For every new conversation, ask the Gemini app to get or add something from your personal Google Workspace explicitly.\" You do not need to repeat this for follow-up questions within the same chat."
+  },
+  {
+    "id": 110,
+    "category": "Google Workspace & Gemini",
+    "question": "Which of the following Google Drive management actions is Gemini unable to perform?",
+    "options": [
+      "Summarizing a PDF",
+      "Finding a lease agreement",
+      "Creating folders or moving content",
+      "Reading a resume"
+    ],
+    "correctAnswer": 2,
+    "hint": "Gemini finds information, but it doesn't organize your file structure.",
+    "explanation": "Gemini is an information retrieval and creation tool, not a file manager. The text states it cannot \"Manage content in your Drive, like create folders or move content between folders.\""
+  },
+  {
+    "id": 111,
+    "category": "Google Workspace & Gemini",
+    "question": "Can Gemini Apps create or delete emails in your Gmail?",
+    "options": [
+      "Yes, it can do both.",
+      "It can create drafts but not delete.",
+      "It can delete emails but not create drafts.",
+      "No, it cannot create drafts or delete emails."
+    ],
+    "correctAnswer": 3,
+    "hint": "Gemini is designed to read and summarize emails, not manage the mailbox itself.",
+    "explanation": "Both \"Create an email draft\" and \"delete emails\" are listed under the \"What Gemini Apps can’t do\" section."
+  },
+  {
+    "id": 112,
+    "category": "Google Workspace & Gemini",
+    "question": "What is a limitation regarding files in Google Drive that are NOT documents or PDFs?",
+    "options": [
+      "Gemini cannot access them.",
+      "Gemini can only read their titles.",
+      "Gemini can convert them to PDFs.",
+      "Gemini can move them to a different folder."
+    ],
+    "correctAnswer": 0,
+    "hint": "Consider media files like pictures and videos.",
+    "explanation": "The limitation states that Gemini cannot access \"content that isn’t in a document or PDF,\" explicitly mentioning pictures and videos as inaccessible types."
+  },
+  {
+    "id": 113,
+    "category": "Google Workspace & Gemini",
+    "question": "Can Gemini Apps tell you how much storage space you have left in Google Drive?",
+    "options": [
+      "Yes, if you ask explicitly.",
+      "No, it cannot count items or check storage.",
+      "Yes, but only for personal accounts.",
+      "Yes, but it requires Admin permission."
+    ],
+    "correctAnswer": 1,
+    "hint": "This involves system statistics and quotas.",
+    "explanation": "The text lists \"Count items in your Drive or tell you how much Drive storage you have\" as a specific inability of the current integration."
+  },
+  {
+    "id": 114,
+    "category": "Google Workspace & Gemini",
+    "question": "To use Google Workspace in Gemini Apps, which account must you be signed into?",
+    "options": [
+      "Any Google account.",
+      "The same account you use with Google Workspace.",
+      "A specialized Gemini-only account.",
+      "Your administrator's account."
+    ],
+    "correctAnswer": 1,
+    "hint": "Integration requires matching identities between the app and the data source.",
+    "explanation": "For the integration to work, you must be signed in to Gemini Apps with the exact same account that holds your Google Workspace data (your email, docs, etc.)."
+  },
+  {
+    "id": 115,
+    "category": "Google Workspace & Gemini",
+    "question": "Which of the following is a correct example of using Gemini with Google Keep?",
+    "options": [
+      "Find me a recipe and save the ingredients to Keep.",
+      "Delete all my old notes in Keep.",
+      "Change the background color of my Keep note.",
+      "Share my shopping list note with Bob."
+    ],
+    "correctAnswer": 0,
+    "hint": "Focus on capturing ideas and information.",
+    "explanation": "This matches the provided example: \"Find me a recipe for apple pie and save the ingredients to Keep.\" It demonstrates the ability to capture information generated in the chat into a note."
   }
 ];
