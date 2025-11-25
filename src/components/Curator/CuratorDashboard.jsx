@@ -37,13 +37,53 @@ const CuratorDashboard = () => {
                         <h1 className="font-serif text-3xl">Curator Dashboard</h1>
                         <p className="text-gray-400 text-sm">Refine questions. Harden distractors. Export.</p>
                     </div>
-                    <button
-                        onClick={copyToClipboard}
-                        className="bg-accent text-black px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-accent/90 transition-colors"
-                    >
-                        {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                        {copied ? "Copied!" : "Copy JSON"}
-                    </button>
+                    <div className="flex gap-3">
+                        <button
+                            onClick={() => {
+                                const newQ = {
+                                    id: questions.length + 1,
+                                    category: "New Category",
+                                    question: "New Question Text",
+                                    options: ["Option A", "Option B", "Option C", "Option D"],
+                                    correctAnswer: 0,
+                                    explanation: "Explanation goes here.",
+                                    hint: "Hint goes here."
+                                };
+                                setQuestions([newQ, ...questions]);
+                            }}
+                            className="bg-white/10 text-white px-4 py-3 rounded-lg font-bold hover:bg-white/20 transition-colors"
+                        >
+                            + Add One
+                        </button>
+                        <button
+                            onClick={() => {
+                                const input = prompt("Paste JSON array here:");
+                                if (input) {
+                                    try {
+                                        const parsed = JSON.parse(input);
+                                        if (Array.isArray(parsed)) {
+                                            // Assign new IDs to avoid conflicts
+                                            const maxId = Math.max(...questions.map(q => q.id));
+                                            const newQuestions = parsed.map((q, idx) => ({ ...q, id: maxId + idx + 1 }));
+                                            setQuestions([...newQuestions, ...questions]);
+                                        }
+                                    } catch (e) {
+                                        alert("Invalid JSON");
+                                    }
+                                }
+                            }}
+                            className="bg-white/10 text-white px-4 py-3 rounded-lg font-bold hover:bg-white/20 transition-colors"
+                        >
+                            + Bulk Import
+                        </button>
+                        <button
+                            onClick={copyToClipboard}
+                            className="bg-accent text-black px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-accent/90 transition-colors"
+                        >
+                            {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                            {copied ? "Copied!" : "Copy JSON"}
+                        </button>
+                    </div>
                 </div>
 
                 <div className="space-y-12">
