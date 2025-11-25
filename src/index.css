@@ -10,7 +10,7 @@
   --color-accent: #10B981;
   --color-accent-blue: #3B82F6;
 
-  --animate-scroll-slow: scroll 200s linear infinite;
+  --animate-scroll-slow: scroll 300s linear infinite;
   --animate-scroll-fast: scroll 50s linear infinite;
   --animate-bg-motion: bg-pan 60s ease-in-out infinite alternate;
 
