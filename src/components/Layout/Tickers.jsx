@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { quizQuestions } from '../../data/quizData';
+import { learningBits } from '../../data/tickerData';
 
 const Tickers = () => {
     const [newsItems, setNewsItems] = useState([]);
-    const [learningItems, setLearningItems] = useState([]);
+    // Use the curated bits directly, duplicated for scrolling
+    const learningItems = [...learningBits, ...learningBits];
 
     useEffect(() => {
         // 1. Fetch Frontier News (API)
@@ -13,28 +14,20 @@ const Tickers = () => {
                 if (res.ok) {
                     const data = await res.json();
                     setNewsItems(data);
+                } else {
+                    throw new Error("API not available");
                 }
             } catch (e) {
-                console.error("Failed to fetch news ticker", e);
+                console.warn("Using fallback news data (API likely unavailable locally)");
+                setNewsItems([
+                    { source: "YouTube / Andrej Karpathy", title: "Intro to Large Language Models", url: "#" },
+                    { source: "Hacker News", title: "OpenAI releases new reasoning model o1", url: "#" },
+                    { source: "YouTube / Two Minute Papers", title: "AI Solves International Math Olympiad Problems", url: "#" },
+                    { source: "AI Explained", title: "GPT-5 Rumors and Release Date", url: "#" }
+                ]);
             }
         };
         fetchNews();
-
-        // 2. Generate Learning Bits (Local Data)
-        const generateLearningBits = () => {
-            // Shuffle questions and pick 20
-            const shuffled = [...quizQuestions].sort(() => 0.5 - Math.random()).slice(0, 20);
-            // Format: "Category: Question -> Answer"
-            const bits = shuffled.map(q => {
-                // Truncate long questions
-                const shortQ = q.question.length > 60 ? q.question.substring(0, 60) + "..." : q.question;
-                // Get correct answer text
-                const answerText = q.options[q.correctAnswer];
-                return `${q.category}: ${shortQ} \u2192 ${answerText}`;
-            });
-            setLearningItems(bits);
-        };
-        generateLearningBits();
     }, []);
 
     if (newsItems.length === 0 && learningItems.length === 0) return null;
@@ -71,9 +64,9 @@ const Tickers = () => {
                     <div className="animate-scroll-slow whitespace-nowrap flex items-center w-max">
                         {/* Duplicated content for seamless loop (2 sets) */}
                         {[...learningItems, ...learningItems].map((text, idx) => (
-                            <div key={`learn-${idx}`} className="flex items-center mx-8">
-                                <span className="text-accent-blue text-xl mr-3">◆</span>
-                                <span className="text-base text-gray-400 font-light tracking-wide">{text}</span>
+                            <div key={`learn-${idx}`} className="flex items-center mx-12">
+                                <span className="text-accent-blue text-xl mr-4">◆</span>
+                                <span className="text-base text-gray-300 font-light tracking-wide">{text}</span>
                             </div>
                         ))}
                     </div>

@@ -2,7 +2,10 @@ export default async function handler(req, res) {
     const YOUTUBE_CHANNELS = [
         { name: "Andrej Karpathy", id: "UCCNb8Rlcfr7pvop9W-QJk6A" },
         { name: "Two Minute Papers", id: "UCbfYPySNq-Nf4DOEoEKXw_w" },
-        { name: "AI Explained", id: "UC-t_dJ_1G1C3c8E7w2n9wDw" }
+        { name: "AI Explained", id: "UC-t_dJ_1G1C3c8E7w2n9wDw" },
+        { name: "Theo - t3.gg", id: "UCz-bY4kUqgO_B4x7v-bK4wQ" },
+        { name: "ThePrimeTime", id: "UCUyeluBRhGPCW4rPe_UvBZQ" },
+        { name: "Matthew Berman", id: "UC_x5XG1OV2P6uZZ5FSM9Ttw" }
     ];
 
     try {
