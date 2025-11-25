@@ -1399,5 +1399,145 @@ export const quizQuestions = [
     "correctAnswer": 0,
     "hint": "Focus on capturing ideas and information.",
     "explanation": "This matches the provided example: \"Find me a recipe for apple pie and save the ingredients to Keep.\" It demonstrates the ability to capture information generated in the chat into a note."
+  },
+  {
+    "id": 116,
+    "category": "DNS & Networking",
+    "question": "Which DNS record type maps a hostname directly to an IPv4 address?",
+    "options": [
+      "CNAME Record",
+      "TXT Record",
+      "A Record",
+      "MX Record"
+    ],
+    "correctAnswer": 2,
+    "hint": "Think of this record as saving a contact in your phone where a name links to a specific number.",
+    "explanation": "The A (Address) Record is specifically designed to point a domain name to a specific IP address."
+  },
+  {
+    "id": 117,
+    "category": "Jagentic Workflow",
+    "question": "In the 'Curator Dashboard Guide', how is the dashboard described in terms of data persistence?",
+    "options": [
+      "It is a Code Generator that does not save to a database yet.",
+      "It automatically syncs with the GitHub repository.",
+      "It uses a local SQL database to store questions.",
+      "It directly updates the Vercel deployment via API."
+    ],
+    "correctAnswer": 0,
+    "hint": "The dashboard creates the 'code' you need, but you have to manually move it to your project files.",
+    "explanation": "The guide explicitly states the dashboard generates code for you to paste and does not save to a database itself."
+  },
+  {
+    "id": 118,
+    "category": "DNS & Networking",
+    "question": "What analogy is used to describe a CNAME Record?",
+    "options": [
+      "A phone book entry.",
+      "Showing your ID card.",
+      "A forwarding address.",
+      "A GPS coordinate."
+    ],
+    "correctAnswer": 2,
+    "hint": "This record points one name to another, similar to how mail can be redirected.",
+    "explanation": "The CNAME is compared to a forwarding address: if you mail 'The President', it goes to 'The White House'."
+  },
+  {
+    "id": 119,
+    "category": "DNS & Networking",
+    "question": "To verify domain ownership with services like Google or OpenAI, which record type should be used?",
+    "options": [
+      "A Record",
+      "CNAME Record",
+      "PTR Record",
+      "TXT Record"
+    ],
+    "correctAnswer": 3,
+    "hint": "This record acts like an ID card holding arbitrary information.",
+    "explanation": "TXT records hold arbitrary text information used for verification, like a secret code."
+  },
+  {
+    "id": 120,
+    "category": "Jagentic Workflow",
+    "question": "Where must you paste the JSON content exported from the Curator Dashboard?",
+    "options": [
+      "src/components/Quiz.js",
+      "public/data.json",
+      "src/data/quizData.js",
+      "config/settings.js"
+    ],
+    "correctAnswer": 2,
+    "hint": "Look for the file path located within the 'src/data' directory.",
+    "explanation": "The guide explicitly names 'src/data/quizData.js' as the location to paste the content."
+  },
+  {
+    "id": 121,
+    "category": "DNS & Networking",
+    "question": "What is the primary benefit of using a CNAME record for a service like 'jagentic-v2.vercel.app'?",
+    "options": [
+      "It speeds up the DNS lookup time.",
+      "It allows the service to change its IP without breaking your site.",
+      "It hides the destination URL from users.",
+      "It improves the security of the domain verification."
+    ],
+    "correctAnswer": 1,
+    "hint": "Think about what happens if the hosting provider (Vercel) decides to move their server to a new address.",
+    "explanation": "Because the CNAME points to a name, the underlying IP of that name can change without you needing to update your DNS."
+  },
+  {
+    "id": 122,
+    "category": "Jagentic Workflow",
+    "question": "What implies that a distractor in a quiz question is 'hardened' or 'good' according to the Curator guide?",
+    "options": [
+      "It is obviously incorrect to be funny.",
+      "It sounds plausible and technical.",
+      "It is very long and complex.",
+      "It is grammatically incorrect."
+    ],
+    "correctAnswer": 1,
+    "hint": "The goal is to make the wrong answer sound like it *could* be right if you don't know the material.",
+    "explanation": "A good distractor like 'To initialize the hidden layer weights' sounds correct to someone who isn't sure."
+  },
+  {
+    "id": 123,
+    "category": "Jagentic Workflow",
+    "question": "What is the correct sequence of git commands to deploy changes after updating the quiz file?",
+    "options": [
+      "git push, git commit, git add",
+      "git commit, git add, git push",
+      "git add ., git commit, git push",
+      "git init, git add, git commit"
+    ],
+    "correctAnswer": 2,
+    "hint": "First you stage the files, then you save the version, and finally you send it to the cloud.",
+    "explanation": "This is the standard workflow: stage changes, save the snapshot (commit), and upload to the server (push)."
+  },
+  {
+    "id": 124,
+    "category": "Jagentic Workflow",
+    "question": "How is the 'Curator Dashboard' accessed?",
+    "options": [
+      "Via a separate admin login page.",
+      "By downloading a desktop application.",
+      "Through a 'secret' client-side route like /#curator.",
+      "By modifying the browser's local storage."
+    ],
+    "correctAnswer": 2,
+    "hint": "It involves adding a specific hash tag to the end of the website URL.",
+    "explanation": "The guide specifies the URL is `https://jagentic.net/#curator`."
+  },
+  {
+    "id": 125,
+    "category": "Jagentic Workflow",
+    "question": "What is the current security measure for the Curator Dashboard according to the guide?",
+    "options": [
+      "Two-factor authentication.",
+      "No password, but changes cannot be saved without GitHub access.",
+      "A simple password prompt.",
+      "IP address allowlisting."
+    ],
+    "correctAnswer": 1,
+    "hint": "The security is inherent in the workflow: viewing is open, but saving requires write access to the code repository.",
+    "explanation": "Security relies on the fact that while anyone can see the dashboard, they can't push changes to your repo."
   }
 ];
