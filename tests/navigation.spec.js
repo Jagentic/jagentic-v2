@@ -23,8 +23,18 @@ test.describe('Navigation & Core Flows', () => {
     test('Navigate to Projects Page', async ({ page }) => {
         await page.goto('http://localhost:5173/#projects');
         await expect(page.locator('text=Projects')).toBeVisible();
-        await expect(page.locator('text=College Football Tracker')).toBeVisible();
+
+        // Check CFB Tracker
+        await expect(page.locator('text=CFB Tracker')).toBeVisible();
         await expect(page.locator('text=Launch App')).toBeVisible();
+
+        // Check Geo Quiz
+        await expect(page.locator('text=Geo Quiz')).toBeVisible();
+        await expect(page.locator('video')).toBeVisible();
+
+        // Check WLBS
+        await expect(page.locator('text=WLBS.org')).toBeVisible();
+        await expect(page.locator('text=Visit Site')).toBeVisible();
     });
 
     test('Navigate to Contact Page', async ({ page }) => {

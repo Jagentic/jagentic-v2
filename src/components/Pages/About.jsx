@@ -30,44 +30,6 @@ const About = () => {
                     </p>
                 </div>
             </div>
-
-            {/* Credentials Section */}
-            <div className="flex flex-col md:flex-row gap-8 items-start">
-                <div className="flex-1">
-                    <h4 className="text-xl font-bold uppercase tracking-widest mb-4 text-gray-500">
-                        Credentials
-                    </h4>
-                    <div className="bg-black/40 p-6 rounded border border-accent/20 transition-colors">
-                        <div className="flex items-center justify-between mb-2">
-                            <span className="text-accent font-mono text-sm">PGP-AIML</span>
-                            <span className="text-gray-500 text-xs">UT Austin McCombs</span>
-                        </div>
-                        <h5 className="text-xl font-serif mb-2 text-white">
-                            Artificial Intelligence & Machine Learning
-                        </h5>
-                        <p className="text-sm text-gray-400 mb-4">
-                            Postgraduate Program &middot; Business Applications
-                        </p>
-                        <p className="text-xs text-gray-500 leading-relaxed">
-                            A comprehensive 7-month curriculum covering Python, Machine Learning, Neural Networks, and Computer Vision, focusing on practical business solutions.
-                        </p>
-                    </div>
-                </div>
-
-                {/* Skills / Stack (Optional Placeholder) */}
-                <div className="flex-1">
-                    <h4 className="text-xl font-bold uppercase tracking-widest mb-4 text-gray-500">
-                        Stack
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                        {['Python', 'React', 'Vite', 'Tailwind', 'LLMs', 'Agent Orchestration', 'Playwright'].map(skill => (
-                            <span key={skill} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300">
-                                {skill}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-            </div>
         </div>
     );
 };
