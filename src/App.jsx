@@ -3,23 +3,35 @@ import Header from './components/Layout/Header';
 import Tickers from './components/Layout/Tickers';
 import QuizContainer from './components/Quiz/QuizContainer';
 import CuratorDashboard from './components/Curator/CuratorDashboard';
+import About from './components/Pages/About';
 import bgImage from './assets/bg-tunnel.jpg';
 
 function App() {
-  const [isCuratorMode, setIsCuratorMode] = useState(false);
+  const [currentHash, setCurrentHash] = useState(window.location.hash);
 
   useEffect(() => {
-    const checkHash = () => {
-      if (window.location.hash === '#curator') {
-        setIsCuratorMode(true);
-      } else {
-        setIsCuratorMode(false); // Ensure it's false if hash changes away from #curator
-      }
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash);
+      setIsCuratorMode(window.location.hash === '#curator');
     };
-    checkHash();
-    window.addEventListener('hashchange', checkHash);
-    return () => window.removeEventListener('hashchange', checkHash);
+
+    // Initial check
+    handleHashChange();
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
+
+  // Simple hash-based routing
+  const renderContent = () => {
+    if (isCuratorMode) return <CuratorDashboard />;
+
+    // Check hash for other pages
+    const hash = window.location.hash;
+    if (hash === '#about') return <About />;
+    // Default to Quiz
+    return <QuizContainer />;
+  };
 
   if (isCuratorMode) {
     return <CuratorDashboard />;
@@ -44,7 +56,7 @@ function App() {
 
         {/* Main Content Area */}
         <main className="flex-1 flex items-center justify-center px-4 pt-20 pb-32 overflow-y-auto">
-          <QuizContainer />
+          {renderContent()}
         </main>
 
         <Tickers />
