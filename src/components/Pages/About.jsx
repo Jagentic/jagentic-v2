@@ -9,7 +9,7 @@ const About = () => {
                     AI Layer Slayer
                 </h1>
                 <h2 className="text-xl md:text-2xl text-gray-400 font-mono tracking-widest uppercase">
-                    Jagentic Team &middot; Elite Ambassador
+                    Jagentic Team &middot; Elite Ambassadors
                 </h2>
             </div>
 
@@ -37,25 +37,20 @@ const About = () => {
                     <h4 className="text-xl font-bold uppercase tracking-widest mb-4 text-gray-500">
                         Credentials
                     </h4>
-                    <div className="bg-black/40 p-6 rounded border border-accent/20 hover:border-accent/50 transition-colors group">
+                    <div className="bg-black/40 p-6 rounded border border-accent/20 transition-colors">
                         <div className="flex items-center justify-between mb-2">
                             <span className="text-accent font-mono text-sm">PGP-AIML</span>
                             <span className="text-gray-500 text-xs">UT Austin McCombs</span>
                         </div>
-                        <h5 className="text-xl font-serif mb-2 group-hover:text-accent transition-colors">
+                        <h5 className="text-xl font-serif mb-2 text-white">
                             Artificial Intelligence & Machine Learning
                         </h5>
                         <p className="text-sm text-gray-400 mb-4">
                             Postgraduate Program &middot; Business Applications
                         </p>
-                        <a
-                            href="https://vrfy.digital/index.php?key=yczpacwe"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white bg-accent/10 px-4 py-2 rounded hover:bg-accent hover:text-black transition-all"
-                        >
-                            Verify Credential <span className="ml-2">→</span>
-                        </a>
+                        <p className="text-xs text-gray-500 leading-relaxed">
+                            A comprehensive 7-month curriculum covering Python, Machine Learning, Neural Networks, and Computer Vision, focusing on practical business solutions.
+                        </p>
                     </div>
                 </div>
 
