@@ -4,6 +4,8 @@ import Tickers from './components/Layout/Tickers';
 import QuizContainer from './components/Quiz/QuizContainer';
 import CuratorDashboard from './components/Curator/CuratorDashboard';
 import About from './components/Pages/About';
+import Projects from './components/Pages/Projects';
+import Contact from './components/Pages/Contact';
 import bgImage from './assets/bg-tunnel.jpg';
 
 function App() {
@@ -12,7 +14,6 @@ function App() {
   useEffect(() => {
     const handleHashChange = () => {
       setCurrentHash(window.location.hash);
-      setIsCuratorMode(window.location.hash === '#curator');
     };
 
     // Initial check
@@ -24,16 +25,16 @@ function App() {
 
   // Simple hash-based routing
   const renderContent = () => {
-    if (isCuratorMode) return <CuratorDashboard />;
+    if (currentHash === '#curator') return <CuratorDashboard />;
+    if (currentHash === '#about') return <About />;
+    if (currentHash === '#projects') return <Projects />;
+    if (currentHash === '#contact') return <Contact />;
 
-    // Check hash for other pages
-    const hash = window.location.hash;
-    if (hash === '#about') return <About />;
     // Default to Quiz
     return <QuizContainer />;
   };
 
-  if (isCuratorMode) {
+  if (currentHash === '#curator') {
     return <CuratorDashboard />;
   }
 
