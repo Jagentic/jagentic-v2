@@ -1539,5 +1539,285 @@ export const quizQuestions = [
     "correctAnswer": 1,
     "hint": "The security is inherent in the workflow: viewing is open, but saving requires write access to the code repository.",
     "explanation": "Security relies on the fact that while anyone can see the dashboard, they can't push changes to your repo."
+  },
+  {
+    "id": 126,
+    "category": "Python Fundamentals",
+    "question": "Which statement best describes the Python Standard Library?",
+    "options": [
+      "Libraries that must be installed manually",
+      "Third-party community packages",
+      "Modules bundled with Python and importable immediately",
+      "Deprecated language features"
+    ],
+    "correctAnswer": 2,
+    "hint": "Think “what Python comes with out of the box.”",
+    "explanation": "The Standard Library is included with every Python installation and provides built-in modules you can use immediately without pip."
+  },
+  {
+    "id": 127,
+    "category": "Python Fundamentals",
+    "question": "Which of the following requires pip to install?",
+    "options": [
+      "json",
+      "os",
+      "datetime",
+      "requests"
+    ],
+    "correctAnswer": 3,
+    "hint": "Which one isn’t included with Python by default?",
+    "explanation": "requests is a third-party HTTP library distributed on PyPI, so it must be installed via pip. The others are built-in stdlib modules."
+  },
+  {
+    "id": 128,
+    "category": "Python Fundamentals",
+    "question": "What is the primary reason pip packages exist?",
+    "options": [
+      "To replace the Standard Library",
+      "To add specialized capabilities not included in Python",
+      "To manage Python’s built-in features",
+      "To uninstall Python modules"
+    ],
+    "correctAnswer": 1,
+    "hint": "Why do external developers create packages?",
+    "explanation": "Pip packages extend Python’s abilities (web frameworks, ML, scraping, visualization). They expand Python beyond the basics."
+  },
+  {
+    "id": 129,
+    "category": "Python Fundamentals",
+    "question": "When using pip install flask, where does Flask come from?",
+    "options": [
+      "Python Standard Library",
+      "PyPI — the Python Package Index",
+      "Python itself",
+      "The language specification"
+    ],
+    "correctAnswer": 1,
+    "hint": "pip downloads from a global repository.",
+    "explanation": "PyPI hosts third-party packages like Flask. pip retrieves them from there and installs them into your environment."
+  },
+  {
+    "id": 130,
+    "category": "Python Fundamentals",
+    "question": "Which of the following is a Standard Library module?",
+    "options": [
+      "numpy",
+      "pandas",
+      "re",
+      "selenium"
+    ],
+    "correctAnswer": 2,
+    "hint": "One option is specifically for regular expressions.",
+    "explanation": "re is a built-in module. The others are pip-installed libraries for data science or browser automation."
+  },
+  {
+    "id": 131,
+    "category": "Python Fundamentals",
+    "question": "What is the main benefit of a virtual environment?",
+    "options": [
+      "Faster code execution",
+      "Isolating project-specific pip dependencies",
+      "Allowing Python to run without being installed",
+      "Replacing the Standard Library"
+    ],
+    "correctAnswer": 1,
+    "hint": "Environments prevent version conflicts.",
+    "explanation": "Virtual environments keep each project's dependencies separate, avoiding global version conflicts."
+  },
+  {
+    "id": 132,
+    "category": "Python Fundamentals",
+    "question": "Why don’t Standard Library modules require pip updates?",
+    "options": [
+      "They never change",
+      "They are updated as part of Python releases",
+      "They are deprecated",
+      "They auto-install pip packages"
+    ],
+    "correctAnswer": 1,
+    "hint": "They ship inside Python.",
+    "explanation": "Stdlib modules update only when Python itself updates; they aren’t managed by pip."
+  },
+  {
+    "id": 133,
+    "category": "Python Fundamentals",
+    "question": "What error occurs when you import a pip package that isn’t installed?",
+    "options": [
+      "Python installs it automatically",
+      "Python warns you but continues",
+      "ModuleNotFoundError",
+      "It falls back to the Standard Library"
+    ],
+    "correctAnswer": 2,
+    "hint": "Missing packages produce a very specific exception.",
+    "explanation": "If a package isn’t available in your environment, Python raises ModuleNotFoundError."
+  },
+  {
+    "id": 134,
+    "category": "Python Fundamentals",
+    "question": "Which scenario most likely requires a pip package?",
+    "options": [
+      "Reading a local text file",
+      "Making HTTP requests with retries/authentication",
+      "Sorting a list",
+      "Formatting dates"
+    ],
+    "correctAnswer": 1,
+    "hint": "Think “something stdlib can do but not as well.”",
+    "explanation": "Advanced HTTP behavior is best handled by third-party libraries like requests or httpx."
+  },
+  {
+    "id": 135,
+    "category": "Python Fundamentals",
+    "question": "You want to build a website backend in Python. What’s correct?",
+    "options": [
+      "You can do it with only the Standard Library",
+      "Use pip-installed frameworks like Flask or FastAPI",
+      "Web frameworks come built-in",
+      "Python can’t build websites"
+    ],
+    "correctAnswer": 1,
+    "hint": "What do real developers actually use in practice?",
+    "explanation": "Production Python web apps rely on pip frameworks. Stdlib does not include a web framework."
+  },
+  {
+    "id": 136,
+    "category": "Python Fundamentals",
+    "question": "What does pip actually do during installation?",
+    "options": [
+      "Modifies Python source code",
+      "Downloads packages from PyPI and installs them",
+      "Generates new built-in modules",
+      "Creates a virtual environment automatically"
+    ],
+    "correctAnswer": 1,
+    "hint": "pip + PyPI are tightly paired.",
+    "explanation": "pip retrieves package files from PyPI and adds them to the active environment’s site-packages."
+  },
+  {
+    "id": 137,
+    "category": "Python Fundamentals",
+    "question": "Which of these tasks does the Standard Library handle well?",
+    "options": [
+      "Machine learning",
+      "Database access with SQLite",
+      "Browser automation",
+      "Deep learning"
+    ],
+    "correctAnswer": 1,
+    "hint": "Only one of these has a built-in module.",
+    "explanation": "sqlite3 is included in the Standard Library; ML and automation require external packages."
+  },
+  {
+    "id": 138,
+    "category": "Web Scraping",
+    "question": "Which library is the right choice for parsing HTML from static pages?",
+    "options": [
+      "BeautifulSoup4",
+      "math",
+      "Flask",
+      "sys"
+    ],
+    "correctAnswer": 0,
+    "hint": "One option is famous specifically for HTML parsing.",
+    "explanation": "BeautifulSoup (pip) is designed for HTML/XML parsing. Stdlib lacks a simple HTML scraper."
+  },
+  {
+    "id": 139,
+    "category": "Web Scraping",
+    "question": "What makes Selenium or Playwright different from BeautifulSoup?",
+    "options": [
+      "They only read plain text",
+      "They render JavaScript and automate browsers",
+      "They don’t work on websites",
+      "They are part of Python's Standard Library"
+    ],
+    "correctAnswer": 1,
+    "hint": "Think dynamic pages vs static.",
+    "explanation": "Selenium/Playwright automate real browsers, enabling interaction with JavaScript-heavy sites."
+  },
+  {
+    "id": 140,
+    "category": "Web Scraping",
+    "question": "Why is scraping dynamic websites harder?",
+    "options": [
+      "The HTML is easier to parse",
+      "Content may load via JavaScript after initial page load",
+      "They block all browsers",
+      "They contain no useful information"
+    ],
+    "correctAnswer": 1,
+    "hint": "Think timing and JS rendering.",
+    "explanation": "Dynamic sites require waiting for scripts to run before the content appears — static scrapers can’t see this."
+  },
+  {
+    "id": 141,
+    "category": "Web Scraping",
+    "question": "What is a common limitation of web scraping?",
+    "options": [
+      "It always violates laws",
+      "Websites may block bots or use CAPTCHAs",
+      "It works faster than APIs",
+      "It requires no maintenance"
+    ],
+    "correctAnswer": 1,
+    "hint": "Websites actively defend themselves.",
+    "explanation": "Sites use CAPTCHAs, rate limits, and anti-bot tools, making scraping fragile."
+  },
+  {
+    "id": 142,
+    "category": "Web Scraping",
+    "question": "Which scraping tool is fastest for simple, static HTML pages?",
+    "options": [
+      "Playwright",
+      "Selenium",
+      "requests + BeautifulSoup",
+      "Django"
+    ],
+    "correctAnswer": 2,
+    "hint": "Avoid full browsers when unnecessary.",
+    "explanation": "requests fetches HTML extremely quickly; BeautifulSoup parses it efficiently."
+  },
+  {
+    "id": 143,
+    "category": "Python Fundamentals",
+    "question": "Why are pip packages versioned separately from Python?",
+    "options": [
+      "To avoid ever updating",
+      "They evolve independently and more frequently",
+      "They’re part of the Standard Library",
+      "They’re only updated yearly"
+    ],
+    "correctAnswer": 1,
+    "hint": "Third-party devs move faster than Python’s release cycle.",
+    "explanation": "Pip packages ship new features and fixes continuously, independent of Python’s release schedule."
+  },
+  {
+    "id": 144,
+    "category": "Web Scraping",
+    "question": "What is a major risk of relying heavily on scraping?",
+    "options": [
+      "You might install Python twice",
+      "Website structure changes can break your scraper",
+      "You lose access to pip",
+      "Python can’t parse HTML"
+    ],
+    "correctAnswer": 1,
+    "hint": "Scrapers depend on HTML stability.",
+    "explanation": "If a site redesigns its page layout, your scraper’s selectors stop matching — requiring updates."
+  },
+  {
+    "id": 145,
+    "category": "Web Scraping",
+    "question": "What is one advantage of APIs over scrapers?",
+    "options": [
+      "APIs are slower",
+      "APIs return structured data reliably",
+      "APIs require browser automation",
+      "APIs always require scraping first"
+    ],
+    "correctAnswer": 1,
+    "hint": "Think “clean JSON vs messy HTML.”",
+    "explanation": "APIs provide consistent structured responses, unlike scraping which must extract data from messy, fragile HTML."
   }
 ];
